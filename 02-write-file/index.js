@@ -10,6 +10,10 @@ fs.writeFile(file, '', (err) => {
 });
 
 stdin.on('data', (message) => {
+  if (message.toString() === 'exit\n') {
+    stdout.write('Your messages are saved. Good bye!');
+    process.exit();
+  }
   fs.appendFile(file, message, (err) => {
     if (err) throw err;
   });
