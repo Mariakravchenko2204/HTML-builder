@@ -1,10 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const source = path.join(__dirname);
-const destination = path.join(__dirname);
-
-copyDir(source, destination, 'files');
+copyDir(__dirname, __dirname, 'files');
 
 async function copyDir(source, destination, folder) {
   let folderName = folder;
