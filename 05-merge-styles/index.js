@@ -7,7 +7,7 @@ getContent(folderPath).then((res) => {
   const writer = fs.createWriteStream(
     path.join(__dirname, 'project-dist', 'bundle.css'),
   );
-  writer.write(res.toString());
+  writer.write(res.join(''));
 });
 
 async function getContent(filesPAth) {

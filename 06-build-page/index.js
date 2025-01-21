@@ -11,7 +11,7 @@ function buildProject() {
       createHTML(projectDist);
       const stylesPath = path.join(__dirname, 'styles');
       getStyles(stylesPath).then((res) => {
-        writeFile(path.join(projectDist, 'style.css'), res.toString());
+        writeFile(path.join(projectDist, 'style.css'), res.join(''));
       });
       const assetsFolder = path.join(__dirname, 'assets');
       const assetsDestination = path.join(projectDist, 'assets');
