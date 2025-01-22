@@ -10,7 +10,7 @@ fs.writeFile(file, '', (err) => {
 });
 
 stdin.on('data', (message) => {
-  if (message.toString() === 'exit\n') {
+  if (message.toString().trim() === 'exit') {
     stdout.write('Your messages are saved. Good bye!');
     process.exit();
   }
